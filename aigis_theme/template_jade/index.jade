@@ -7,16 +7,31 @@ html
     link(href=root + 'styleguide_assets/css/theme.css', rel='stylesheet')
     link(href=root + 'css/style.css', rel='stylesheet')
     script(src=root + 'styleguide_assets/js/drawer.js')
+    script(src=root + 'styleguide_assets/js/setting-menu.js')
     if title === 'all'
       include ./lunr-script
   body
-    .aigis-global-header
-      header.aigis-global-header__heading
+    header.aigis-global-header
+      div.aigis-global-header__heading
         a.aigis-global-header__title(href=root + 'index.html') #{config.name}
       div.aigis-global-header__menu
         button.aigis-global-header__toggler(type="button", id="aigis-drawer-toggler")
           .aigis-icon-hamburger.aigis-icon-hamburger--htx(id="aigis-drawer-toggler-icon")
             span toggle menu
+      div.aigis-global-header__setting-menu
+        button.aigis-global-header__setting-toggler(type="button", id="aigis-setting-menu-toggler")
+          span.aigis-icon-cog(id="aigis-setting-menu-icon")
+            include ../styleguide_assets/img/cog.svg
+        .aigis-setting-menu(id="aigis-setting-menu")
+          .aigis-setting-menu__inner
+            label.aigis-setting-menu__item
+              .aigis-setting-menu__key プレビューエリアの色を変更します。
+              .aigis-setting-menu__value
+                input(type="color", id="aigis-change-preview-bg-color")
+            label.aigis-setting-menu__item
+              .aigis-setting-menu__key コードブロックを非表示にします
+              .aigis-setting-menu__value
+                input(type="checkbox", id="aigis-toggle-codeblock")
     .aigis-container
       include ./sidemenu
       .aigis-contents
