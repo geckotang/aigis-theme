@@ -1,0 +1,35 @@
+if components.length
+
+  if title === 'all'
+
+    .aigis-searchForm
+      .aigis-searchForm__heading 検索できるページ
+      .aigis-searchForm__body
+        input.aigis-searchForm__input(id="aigis-incremental-search" type="text")
+
+    each component, idx in components
+      .aigis-module(data-component-idx=idx, style="display: block;")
+        h2.aigis-module__heading(id=component.config.name) #{component.config.name}
+        .aigis-module__filepath!= component.sourcePath
+        ul.aigis-tags
+          each tag in component.config.tag
+            li.aigis-tags__item(class='aigis-tags__item--' + tag) #{tag}
+        != component.html
+  else
+    nav
+      h2.aigis-module__heading Components
+      ul.aigis-moduleList
+        each component in components
+          li.aigis-moduleList__item
+            a(href='#' + component.config.name) #{component.config.name}
+    each component, idx in components
+      .aigis-module
+        h2.aigis-module__heading(id=component.config.name) #{component.config.name}
+        .aigis-module__filepath!= component.sourcePath
+        ul.aigis-tags
+          each tag in component.config.tag
+            li.aigis-tags__item(class='aigis-tags__item--' + tag) #{tag}
+        != component.html
+
+else
+  != html

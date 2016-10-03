@@ -1,0 +1,26 @@
+script(src=root + 'styleguide_assets/js/lunr.min.js')
+//script(src=root + 'styleguide_assets/js/lunr.stemmer.support.js')
+//script(src=root + 'styleguide_assets/js/tinyseg.js')
+//script(src=root + 'styleguide_assets/js/lunr.jp.js')
+//script(src=root + 'styleguide_assets/js/lunr.multi.js')
+script(src=root + 'styleguide_assets/js/search.js')
+script
+  | // For Lunr
+  | (function (window, document, undefined) {
+  each component, idx in components
+    -
+      var moduleText = component.md.replace(/<("[^"]*"|'[^']*'|[^'">])*>/gm, '')
+                                   .replace(/\s+/gm,' ')
+                                   .replace(/\n/gm,' ')
+                                   .replace(/```.*```/gm, '')
+      var tags = component.config.tag.length > 0 ? component.config.tag : []
+      var categories = component.config.category.length > 0 ? component.config.category : []
+    |   window.Aigis.lunrIndex.add({
+    |     'id'         : #{idx},
+    |     'name'       : "#{component.config.name}",
+    |     'body'       : "#{moduleText}",
+    |     'tags'       : ['!{tags.join().replace(",", "','")} '],
+    |     'categories' : ['!{categories.join().replace(",", "','")} ']
+    |   });
+  | 
+  | })(this, this.document);
