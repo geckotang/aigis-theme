@@ -1,34 +1,171 @@
 /*
 ---
-name: Paragraph
-category: body
+name: Global Header
+category: layout/header
+search:
+  - all
 ---
 
-```html
-<p>
-The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.
-</p>
+```jade
+.aigis-global-header
+  header.aigis-header__heading
+    a.aigis-header__title(href=root + 'index.html') #{config.name}
 ```
-
 */
+.aigis-global-header {
+  position: fixed;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 44px;
+  font-size: 20px;
+  background-color: #333;
+}
+.aigis-global-header__heading {
+  flex: 0 0 auto;
+  margin: 0 0 0 15px;
+  color: #fafafa;
+  font-size: 20px;
+}
+.aigis-global-header__title:link,
+.aigis-global-header__title:visited,
+.aigis-global-header__title:focus,
+.aigis-global-header__title:hover {
+  color: inherit;
+  text-decoration: none;
+}
+.aigis-global-header__menu {
+  order: -1;
+  flex: 0 0 auto;
+}
+.aigis-global-header__toggler {
+  box-sizing: border-box;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
 
 /*
 ---
-name: Heading
-category: body
+name: Hamburger Icon
+category: 
+  - layout/header
+  - icon
+search:
+  - all
 ---
 
 ```html
-<h1>Heading1</h1>
-<h2>Heading2</h2>
-<h3>Heading3</h3>
-<h4>Heading4</h4>
-<h5>Heading5</h5>
-<h6>Heading6</h6>
+  <span class="aigis-icon-hamburger  aigis-icon-hamburger--htx">
+    <span>toggle menu</span>
+  </span>
+  <span class="aigis-icon-hamburger  aigis-icon-hamburger--htx  is-active">
+    <span>toggle menu</span>
+  </span>
 ```
-
 */
+.aigis-icon-hamburger {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 44px;
+  height: 44px;
+  font-size: 0;
+  text-indent: -9999px;
+  -webkit-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
 
+.aigis-icon-hamburger span {
+  display: block;
+  position: absolute;
+  top: 21px;
+  left: 13px;
+  right: 13px;
+  height: 3px;
+  background-color: #9e9e9e;
+}
+
+.aigis-icon-hamburger span::before,
+.aigis-icon-hamburger span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  content: "";
+  background-color: #9e9e9e;
+}
+
+.aigis-icon-hamburger span::before {
+  top: -6px;
+}
+
+.aigis-icon-hamburger span::after {
+  bottom: -6px;
+}
+
+.aigis-icon-hamburger--htx {
+  background-color: #4d4d4d;
+}
+
+.aigis-icon-hamburger--htx span {
+  transition: background 0s 0.3s;
+}
+
+.aigis-icon-hamburger--htx span::before,
+.aigis-icon-hamburger--htx span::after {
+  transition-duration: 0.3s, 0.3s;
+  transition-delay: 0.3s, 0s;
+}
+
+.aigis-icon-hamburger--htx span::before {
+  transition-property: top, transform;
+}
+
+.aigis-icon-hamburger--htx span::after {
+  -webkit-transition-property: bottom, -webkit-transform;
+          transition-property: bottom, transform;
+}
+
+/* active state */
+.aigis-icon-hamburger--htx.is-active {
+  background-color: #727272;
+}
+
+.aigis-icon-hamburger--htx.is-active span {
+  background: none;
+}
+
+.aigis-icon-hamburger--htx.is-active span::before {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.aigis-icon-hamburger--htx.is-active span::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
+.aigis-icon-hamburger--htx.is-active span::before,
+.aigis-icon-hamburger--htx.is-active span::after {
+  background-color: #fff;
+  transition-delay: 0s, 0.3s;
+}
 
 /*
 ---
@@ -36,6 +173,8 @@ name: Header
 category: layout/header
 tag:
   - deprecated
+search:
+  - all
 ---
 
 ```html
@@ -63,6 +202,8 @@ tag:
 name: Footer
 category: layout/footer
 tag: latest
+search:
+  - all
 ---
 
 ```html
@@ -85,6 +226,8 @@ tag: latest
 name: Preview
 category: body
 tag: latest
+search:
+  - all
 ---
 
 ```html
@@ -128,6 +271,8 @@ background: url( 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6
 name: Codeblock
 category: body
 tag: latest
+search:
+  - all
 ---
 
 ```html
@@ -166,6 +311,8 @@ tag: latest
 name: Sidemenu
 category: layout/sidemenu
 tag: latest
+search:
+  - all
 ---
 
 ```html
@@ -188,15 +335,24 @@ tag: latest
 */
 .aigis-sidemenu {
   position: fixed;
-  top: 0;
-  bottom: 0;
+  z-index: 2;
+  top: 44px;
   left: 0;
   width: 280px;
   box-sizing: border-box;
   background-color: #f9faf9;
   color: #33331a;
   overflow-x: scroll;
-  height: 100%; }
+  height: calc(100% - 44px);
+  visibility: hidden;
+  transform: translateX(-100%);
+  transition: visibility 0s linear 0.1s,
+              transform 0.2s ease-in;
+}
+.aigis-sidemenu.is-opened {
+  visibility: visible;
+  transform: translateX(0);
+}
 .aigis-sidemenu__heading {
   font-size: 20px;
   margin: 12px 0;
@@ -217,6 +373,8 @@ tag: latest
 name: Category list
 category: layout/sidemenu
 tag: latest
+search:
+  - all
 ---
 
 ```html
@@ -246,7 +404,6 @@ tag: latest
   overflow: hidden;
   white-space: nowrap;
   border-radius: 0px;
-  outline: none;
   text-decoration: none; }
 
 .aigis-categoryList li:hover a[href]:hover{
@@ -274,6 +431,8 @@ tag: latest
 name: Tag list
 category: layout/sidemenu
 tag: latest
+search:
+  - all
 ---
 
 ```html
@@ -312,6 +471,8 @@ tag: latest
 name: Module list
 category: body
 tag: latest
+search:
+  - all
 ---
 
 ```html
@@ -388,6 +549,8 @@ category: body
 name: Color palette
 category: layout/special
 tag: special
+search:
+  - all
 ---
 
 ```html
@@ -445,10 +608,10 @@ body {
 
 .aigis-contents {
   box-sizing: border-box;
-  padding-right: 10px;
-  padding-left: 280px;
+  padding: 40px 10px 0;
   margin: 0 auto;
-  font-size: 18px; }
+  font-size: 18px;
+}
 .aigis-contents__body {
   color: #33331a;
   max-width: 960px;

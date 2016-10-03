@@ -6,36 +6,73 @@
     <link href="./styleguide_assets/css/highlight/okadia.css" rel="stylesheet">
     <link href="./styleguide_assets/css/theme.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
+    <script src="./styleguide_assets/js/drawer.js"></script>
   </head>
   <body>
+    <div class="aigis-global-header">
+      <header class="aigis-global-header__heading"><a href="./index.html" class="aigis-global-header__title">Examples Styleguide</a></header>
+      <div class="aigis-global-header__menu">
+        <button type="button" id="aigis-drawer-toggler" class="aigis-global-header__toggler">
+          <div id="aigis-drawer-toggler-icon" class="aigis-icon-hamburger aigis-icon-hamburger--htx"><span>toggle menu</span></div>
+        </button>
+      </div>
+    </div>
     <div class="aigis-container">
-      <div class="aigis-sidemenu">
-        <header class="aigis-header"><a href="./index.html">Examples Styleguide</a></header>
+      <div id="aigis-drawer" class="aigis-sidemenu">
         <h2 class="aigis-sidemenu__heading"><a href="./search/all/index.html">Search</a></h2>
         <h2 class="aigis-sidemenu__heading">Category</h2>
-        <nav class="aigis-categoryList"><ul data-path-depth="0"><li data-path-depth="0"><a href="category/base">base</a></li><li data-path-depth="0"><a href="category/mod">mod</a><ul data-path-depth="1"><li data-path-depth="1"><a href="category/mod/btn">btn</a></li><li data-path-depth="1"><a href="category/mod/footer">footer</a></li><li data-path-depth="1"><a href="category/mod/header">header</a></li><li data-path-depth="1"><a href="category/mod/hero">hero</a></li></ul></li></ul>
+        <nav class="aigis-categoryList"><ul data-path-depth="0"><li data-path-depth="0"><a href="category/base">base</a></li><li data-path-depth="0"><a href="category/body">body</a></li><li data-path-depth="0"><a href="category/icon">icon</a></li><li data-path-depth="0"><a>layout</a><ul data-path-depth="1"><li data-path-depth="1"><a href="category/layout/footer">footer</a></li><li data-path-depth="1"><a href="category/layout/header">header</a></li><li data-path-depth="1"><a href="category/layout/sidemenu">sidemenu</a></li><li data-path-depth="1"><a href="category/layout/special">special</a></li></ul></li><li data-path-depth="0"><a href="category/mod">mod</a><ul data-path-depth="1"><li data-path-depth="1"><a href="category/mod/btn">btn</a></li><li data-path-depth="1"><a href="category/mod/footer">footer</a></li><li data-path-depth="1"><a href="category/mod/header">header</a></li><li data-path-depth="1"><a href="category/mod/hero">hero</a></li></ul></li></ul>
         </nav>
         <h2 class="aigis-sidemenu__heading">Tag</h2>
-        <nav class="aigis-tags aigis-tagList"><a href="./tag/base/index.html" class="aigis-tags__item aigis-tags__item--base">base</a><a href="./tag/latest/index.html" class="aigis-tags__item aigis-tags__item--latest">latest</a>
+        <nav class="aigis-tags aigis-tagList"><a href="./tag/base/index.html" class="aigis-tags__item aigis-tags__item--base">base</a><a href="./tag/deprecated/index.html" class="aigis-tags__item aigis-tags__item--deprecated">deprecated</a><a href="./tag/latest/index.html" class="aigis-tags__item aigis-tags__item--latest">latest</a><a href="./tag/special/index.html" class="aigis-tags__item aigis-tags__item--special">special</a>
         </nav>
         <h2 class="aigis-sidemenu__heading"><a href="./color.html">All Colors</a></h2>
       </div>
       <div class="aigis-contents">
-        <div class="aigis-contents__body"><div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: #333;"></div><div class="aigis-colorPalette__label">#333</div></div>
+        <div class="aigis-contents__body"><div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: #000;"></div><div class="aigis-colorPalette__label">#000</div></div>
+<div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: #00c655;"></div><div class="aigis-colorPalette__label">#00c655</div></div>
+<div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: #08f;"></div><div class="aigis-colorPalette__label">#08f</div></div>
+<div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: #272822;"></div><div class="aigis-colorPalette__label">#272822</div></div>
+<div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: #333;"></div><div class="aigis-colorPalette__label">#333</div></div>
+<div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: #33331a;"></div><div class="aigis-colorPalette__label">#33331a</div></div>
 <div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: #3DB680;"></div><div class="aigis-colorPalette__label">#3DB680</div></div>
+<div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: #428b1c;"></div><div class="aigis-colorPalette__label">#428b1c</div></div>
 <div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: #444;"></div><div class="aigis-colorPalette__label">#444</div></div>
+<div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: #454545;"></div><div class="aigis-colorPalette__label">#454545</div></div>
+<div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: #4d4d4d;"></div><div class="aigis-colorPalette__label">#4d4d4d</div></div>
 <div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: #555;"></div><div class="aigis-colorPalette__label">#555</div></div>
+<div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: #55b5db;"></div><div class="aigis-colorPalette__label">#55b5db</div></div>
+<div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: #5B594B;"></div><div class="aigis-colorPalette__label">#5B594B</div></div>
+<div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: #5D5D5D;"></div><div class="aigis-colorPalette__label">#5D5D5D</div></div>
+<div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: #6272a4;"></div><div class="aigis-colorPalette__label">#6272a4</div></div>
 <div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: #666;"></div><div class="aigis-colorPalette__label">#666</div></div>
+<div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: #66d9ef;"></div><div class="aigis-colorPalette__label">#66d9ef</div></div>
+<div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: #66D9EF;"></div><div class="aigis-colorPalette__label">#66D9EF</div></div>
+<div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: #6be5fd;"></div><div class="aigis-colorPalette__label">#6be5fd</div></div>
+<div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: #727272;"></div><div class="aigis-colorPalette__label">#727272</div></div>
+<div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: #728fcb;"></div><div class="aigis-colorPalette__label">#728fcb</div></div>
+<div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: #75715E;"></div><div class="aigis-colorPalette__label">#75715E</div></div>
+<div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: #7a7a7a;"></div><div class="aigis-colorPalette__label">#7a7a7a</div></div>
+<div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: #8C8C8C;"></div><div class="aigis-colorPalette__label">#8C8C8C</div></div>
+<div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: #9e9e9e;"></div><div class="aigis-colorPalette__label">#9e9e9e</div></div>
+<div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: #A0A0A0;"></div><div class="aigis-colorPalette__label">#A0A0A0</div></div>
+<div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: #ADADAD;"></div><div class="aigis-colorPalette__label">#ADADAD</div></div>
 <div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: #e5e5e5;"></div><div class="aigis-colorPalette__label">#e5e5e5</div></div>
+<div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: #eee;"></div><div class="aigis-colorPalette__label">#eee</div></div>
 <div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: #F3F3F3;"></div><div class="aigis-colorPalette__label">#F3F3F3</div></div>
 <div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: #f7f7f7;"></div><div class="aigis-colorPalette__label">#f7f7f7</div></div>
+<div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: #f8f8f2;"></div><div class="aigis-colorPalette__label">#f8f8f2</div></div>
+<div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: #f9faf9;"></div><div class="aigis-colorPalette__label">#f9faf9</div></div>
+<div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: #fafafa;"></div><div class="aigis-colorPalette__label">#fafafa</div></div>
+<div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: #ff4f4f;"></div><div class="aigis-colorPalette__label">#ff4f4f</div></div>
 <div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: #FFEA3A;"></div><div class="aigis-colorPalette__label">#FFEA3A</div></div>
 <div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: #fff;"></div><div class="aigis-colorPalette__label">#fff</div></div>
 <div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: black;"></div><div class="aigis-colorPalette__label">black</div></div>
+<div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: rgba(0, 0, 0, 0.1);"></div><div class="aigis-colorPalette__label">rgba(0, 0, 0, 0.1)</div></div>
 <div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: rgba(255, 255, 255, 0.8);"></div><div class="aigis-colorPalette__label">rgba(255, 255, 255, 0.8)</div></div>
 <div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: tomato;"></div><div class="aigis-colorPalette__label">tomato</div></div>
 <div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: transparent;"></div><div class="aigis-colorPalette__label">transparent</div></div>
-          <footer class="aigis-footer">Last update at 2016/10/03 18:59</footer>
+          <footer class="aigis-footer">Last update at 2016/10/04 00:02</footer>
         </div>
       </div>
     </div>

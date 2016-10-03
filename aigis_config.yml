@@ -4,6 +4,7 @@ name: Examples Styleguide
 
 # The directory containing the source files to parse recursively
 source:
+  - ./aigis_theme/styleguide_assets/css/theme.css
   - ./src/scss
 
 # The types that aigis will scan to document comment
