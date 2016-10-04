@@ -9,6 +9,7 @@
     <script src="./styleguide_assets/js/drawer.js"></script>
     <script src="./styleguide_assets/js/setting-menu.js"></script>
     <script src="./styleguide_assets/js/codeblocks-expander.js"></script>
+    <script src="./styleguide_assets/js/preview-bg-color-changer.js"></script>
   </head>
   <body>
     <header class="aigis-global-header">
@@ -25,12 +26,15 @@
 </span></button>
         <div id="aigis-setting-menu" class="aigis-setting-menu">
           <div class="aigis-setting-menu__inner">
-            <label class="aigis-setting-menu__item">
-              <div class="aigis-setting-menu__key">プレビューエリアの色を変更します。</div>
-              <div class="aigis-setting-menu__value">
-                <input type="color" id="aigis-change-preview-bg-color">
+            <div class="aigis-setting-menu__item">
+              <div id="aigis-preview-bg-color" class="aigis-setting-menu__key is-disabled">
+                <label for="aigis-preview-bg-color-enabler"><span>プレビューエリアの色を変更します。</span></label>
+                <input type="color" id="aigis-preview-bg-color-changer" disabled>
               </div>
-            </label>
+              <div class="aigis-setting-menu__value">
+                <input type="checkbox" id="aigis-preview-bg-color-enabler">
+              </div>
+            </div>
             <label class="aigis-setting-menu__item">
               <div class="aigis-setting-menu__key">コードブロックを表示します</div>
               <div class="aigis-setting-menu__value">
@@ -80,6 +84,7 @@
 <div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: #8C8C8C;"></div><div class="aigis-colorPalette__label">#8C8C8C</div></div>
 <div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: #9e9e9e;"></div><div class="aigis-colorPalette__label">#9e9e9e</div></div>
 <div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: #ADADAD;"></div><div class="aigis-colorPalette__label">#ADADAD</div></div>
+<div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: #ccc;"></div><div class="aigis-colorPalette__label">#ccc</div></div>
 <div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: #e5e5e5;"></div><div class="aigis-colorPalette__label">#e5e5e5</div></div>
 <div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: #eee;"></div><div class="aigis-colorPalette__label">#eee</div></div>
 <div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: #F3F3F3;"></div><div class="aigis-colorPalette__label">#F3F3F3</div></div>
@@ -100,7 +105,7 @@
 <div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: rgba(40, 41, 35, 1);"></div><div class="aigis-colorPalette__label">rgba(40, 41, 35, 1)</div></div>
 <div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: tomato;"></div><div class="aigis-colorPalette__label">tomato</div></div>
 <div class="aigis-colorPalette"><div class="aigis-colorPalette__color" style="background-color: transparent;"></div><div class="aigis-colorPalette__label">transparent</div></div>
-          <footer class="aigis-footer">Last update at 2016/10/04 11:13</footer>
+          <footer class="aigis-footer">Last update at 2016/10/04 12:01</footer>
         </div>
       </div>
     </div>

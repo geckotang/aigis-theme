@@ -9,6 +9,7 @@
     <script src="../../styleguide_assets/js/drawer.js"></script>
     <script src="../../styleguide_assets/js/setting-menu.js"></script>
     <script src="../../styleguide_assets/js/codeblocks-expander.js"></script>
+    <script src="../../styleguide_assets/js/preview-bg-color-changer.js"></script>
   </head>
   <body>
     <header class="aigis-global-header">
@@ -25,12 +26,15 @@
 </span></button>
         <div id="aigis-setting-menu" class="aigis-setting-menu">
           <div class="aigis-setting-menu__inner">
-            <label class="aigis-setting-menu__item">
-              <div class="aigis-setting-menu__key">プレビューエリアの色を変更します。</div>
-              <div class="aigis-setting-menu__value">
-                <input type="color" id="aigis-change-preview-bg-color">
+            <div class="aigis-setting-menu__item">
+              <div id="aigis-preview-bg-color" class="aigis-setting-menu__key is-disabled">
+                <label for="aigis-preview-bg-color-enabler"><span>プレビューエリアの色を変更します。</span></label>
+                <input type="color" id="aigis-preview-bg-color-changer" disabled>
               </div>
-            </label>
+              <div class="aigis-setting-menu__value">
+                <input type="checkbox" id="aigis-preview-bg-color-enabler">
+              </div>
+            </div>
             <label class="aigis-setting-menu__item">
               <div class="aigis-setting-menu__key">コードブロックを表示します</div>
               <div class="aigis-setting-menu__value">
@@ -211,7 +215,7 @@
 </code></pre>
 
           </div>
-          <footer class="aigis-footer">Last update at 2016/10/04 11:13</footer>
+          <footer class="aigis-footer">Last update at 2016/10/04 12:01</footer>
         </div>
       </div>
     </div>

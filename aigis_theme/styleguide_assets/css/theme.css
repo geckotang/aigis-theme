@@ -314,6 +314,9 @@ search:
 .aigis-preview {
   background: url( 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAAF0lEQVR4AWP4DwVvoWCgBGAMmMQACQAAuK72AWHjK4wAAAAASUVORK5CYII=' );
 }
+.aigis-preview.is-edited {
+  background-image: none;
+}
 .aigis-preview + pre {
   margin-top: 0;
 }
@@ -800,10 +803,17 @@ search:
 .aigis-setting-menu__item:first-child {
   border-top-width: 0;
 }
+.aigis-setting-menu__item input[type=color][disabled]{
+  opacity: 0.5;
+  filter: grayscale(1);
+}
 .aigis-setting-menu__key {
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
+}
+.aigis-setting-menu__key.is-disabled {
+  color: #ccc;
 }
 .aigis-setting-menu__value {
   order: -1;
