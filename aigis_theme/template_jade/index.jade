@@ -16,6 +16,7 @@ html
     header.aigis-global-header
       div.aigis-global-header__heading
         a.aigis-global-header__title(href=root + 'index.html') #{config.name}
+        .aigis-global-header__time Last update at #{timestamp}
       div.aigis-global-header__menu
         button.aigis-global-header__toggler(type="button", id="aigis-drawer-toggler")
           .aigis-icon-hamburger.aigis-icon-hamburger--htx(id="aigis-drawer-toggler-icon")
@@ -42,4 +43,3 @@ html
       .aigis-contents
         .aigis-contents__body
           include ./components
-          footer.aigis-footer Last update at #{timestamp}

@@ -10,6 +10,7 @@ search:
 <header class="aigis-global-header">
   <div class="aigis-global-header__heading">
     <a href="../../index.html" class="aigis-global-header__title">Examples Styleguide</a>
+    <div class="aigis-global-header__time">Last update at 2016/10/04 12:08</div>
   </div>
   <div class="aigis-global-header__menu">
     <button type="button" id="aigis-drawer-toggler" class="aigis-global-header__toggler">
@@ -39,16 +40,30 @@ search:
 }
 .aigis-global-header__heading {
   flex: 0 0 auto;
-  margin: 0 0 0 15px;
-  color: #fafafa;
-  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 15px;
+  line-height: 1;
+}
+.aigis-global-header__title {
+  flex: 0 0 auto;
+  font-size: 18px;
+  font-weight: bold;
 }
 .aigis-global-header__title:link,
 .aigis-global-header__title:visited,
 .aigis-global-header__title:focus,
 .aigis-global-header__title:hover {
-  color: inherit;
+  color: #cccccc;
   text-decoration: none;
+}
+.aigis-global-header__time {
+  color: #999999;
+  font-size: 10px;
+  margin-top: 3px;
 }
 .aigis-global-header__menu {
   order: -1;
@@ -66,7 +81,6 @@ search:
 .aigis-global-header__setting-menu {
   position: relative;
   flex: 0 0 auto;
-  margin-left: auto;
 }
 .aigis-global-header__setting-toggler {
   box-sizing: border-box;
@@ -118,9 +132,9 @@ search:
   display: block;
   position: absolute;
   top: 21px;
-  left: 13px;
-  right: 13px;
-  height: 3px;
+  left: 15px;
+  right: 15px;
+  height: 2px;
   background-color: #9e9e9e;
 }
 
@@ -130,17 +144,17 @@ search:
   display: block;
   left: 0;
   width: 100%;
-  height: 3px;
+  height: 2px;
   content: "";
   background-color: #9e9e9e;
 }
 
 .aigis-icon-hamburger span::before {
-  top: -6px;
+  top: -4px;
 }
 
 .aigis-icon-hamburger span::after {
-  bottom: -6px;
+  bottom: -4px;
 }
 
 .aigis-icon-hamburger--htx {
@@ -224,14 +238,14 @@ search:
   background-color: #727272;
 }
 .aigis-icon-cog > svg{
-  width: 24px;
-  height: 24px;
+  width: 14px;
+  height: 14px;
   fill: #9e9e9e;
   transition: all 0.3s;
 }
 .aigis-icon-cog.is-active > svg{
   fill: #ffffff;
-  transform: scale(0.8);
+  transform: scale(1.2);
 }
 
 
@@ -774,25 +788,11 @@ search:
   transform: translateY(0);
   transition-delay: 0s;
 }
-.aigis-setting-menu::before {
-  position: absolute;
-  top: -5px;
-  right: 9px;
-  display: block;
-  content: "";
-  width: 0;
-  height: 0;
-  border-width: 0 8px 10px 8px;
-  border-color: transparent transparent #f9faf9 transparent;
-  border-style: solid;
-  display: block;
-  z-index: 4;
-}
 .aigis-setting-menu__inner {
   padding: 0 10px;
-  background-color: #f9faf9;
-  border-radius: 4px;
-  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.5);
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 0px 6px 2px rgba(0, 0, 0, 0.5);
 }
 .aigis-setting-menu__item {
   display: flex;
