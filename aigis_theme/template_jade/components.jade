@@ -4,8 +4,9 @@ if components.length
     h2.aigis-module__heading All Modules
 
     .aigis-searchForm
-      .aigis-searchForm__heading 検索できるページ
       .aigis-searchForm__body
+        .aigis-searchForm__icon
+          include ../styleguide_assets/img/search.svg
         input.aigis-searchForm__input(id="aigis-incremental-search" type="text")
 
     each component, idx in components

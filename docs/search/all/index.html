@@ -50,7 +50,7 @@
           'categories' : ['layout/footer ']
         });  window.Aigis.lunrIndex.add({
           'id'         : 5,
-          'name'       : "Preview",
+          'name'       : "Preview Area",
           'body'       : " Button Button  ",
           'tags'       : ['latest '],
           'categories' : ['body ']
@@ -98,30 +98,36 @@
           'categories' : ['layout/header ']
         });  window.Aigis.lunrIndex.add({
           'id'         : 13,
+          'name'       : "Search",
+          'body'       : "  ",
+          'tags'       : ['menu '],
+          'categories' : ['mod/search ']
+        });  window.Aigis.lunrIndex.add({
+          'id'         : 14,
           'name'       : "header",
           'body'       : " aigis About Usage Sample Docs GitHub  ",
           'tags'       : [' '],
           'categories' : ['mod','mod/header ']
         });  window.Aigis.lunrIndex.add({
-          'id'         : 14,
+          'id'         : 15,
           'name'       : "hero",
           'body'       : " aigis is a styleguide generator. Make easier and maintainable. View on GitHub  ",
           'tags'       : [' '],
           'categories' : ['mod/hero','mod ']
         });  window.Aigis.lunrIndex.add({
-          'id'         : 15,
+          'id'         : 16,
           'name'       : "footer",
           'body'       : " Created and maintained by @nakajmg and @geckotang  ",
           'tags'       : [' '],
           'categories' : ['mod/footer','mod ']
         });  window.Aigis.lunrIndex.add({
-          'id'         : 16,
+          'id'         : 17,
           'name'       : "Button",
           'body'       : " Button styles. * Base button style. * Use `a` or `button` tag. Button Button  ",
           'tags'       : ['latest','base '],
           'categories' : ['mod/btn','base,mod ']
         });  window.Aigis.lunrIndex.add({
-          'id'         : 17,
+          'id'         : 18,
           'name'       : "Profile",
           'body'       : " プロフィール Created and Maintained by @nakajmg and @geckotang  ",
           'tags'       : [' '],
@@ -133,7 +139,7 @@
   <body>
     <header class="aigis-global-header">
       <div class="aigis-global-header__heading"><a href="../../index.html" class="aigis-global-header__title">Examples Styleguide</a>
-        <div class="aigis-global-header__time">Last update at 2016/10/04 14:40</div>
+        <div class="aigis-global-header__time">Last update at 2016/10/04 14:58</div>
       </div>
       <div class="aigis-global-header__menu">
         <button type="button" id="aigis-drawer-toggler" class="aigis-global-header__toggler">
@@ -169,7 +175,7 @@
     <div id="aigis-drawer" class="aigis-sidemenu">
       <h2 class="aigis-sidemenu__heading"><a href="../../search/all/index.html">Search</a></h2>
       <h2 class="aigis-sidemenu__heading">Category</h2>
-      <nav class="aigis-categoryList"><ul data-path-depth="0"><li data-path-depth="0"><a href="../../category/base">base</a></li><li data-path-depth="0"><a href="../../category/body">body</a></li><li data-path-depth="0"><a href="../../category/icon">icon</a></li><li data-path-depth="0"><a>layout</a><ul data-path-depth="1"><li data-path-depth="1"><a href="../../category/layout/footer">footer</a></li><li data-path-depth="1"><a href="../../category/layout/header">header</a></li><li data-path-depth="1"><a href="../../category/layout/sidemenu">sidemenu</a></li><li data-path-depth="1"><a href="../../category/layout/special">special</a></li></ul></li><li data-path-depth="0"><a href="../../category/menu">menu</a></li><li data-path-depth="0"><a href="../../category/mod">mod</a><ul data-path-depth="1"><li data-path-depth="1"><a href="../../category/mod/btn">btn</a></li><li data-path-depth="1"><a href="../../category/mod/footer">footer</a></li><li data-path-depth="1"><a href="../../category/mod/header">header</a></li><li data-path-depth="1"><a href="../../category/mod/hero">hero</a></li></ul></li></ul>
+      <nav class="aigis-categoryList"><ul data-path-depth="0"><li data-path-depth="0"><a href="../../category/base">base</a></li><li data-path-depth="0"><a href="../../category/body">body</a></li><li data-path-depth="0"><a href="../../category/icon">icon</a></li><li data-path-depth="0"><a>layout</a><ul data-path-depth="1"><li data-path-depth="1"><a href="../../category/layout/footer">footer</a></li><li data-path-depth="1"><a href="../../category/layout/header">header</a></li><li data-path-depth="1"><a href="../../category/layout/sidemenu">sidemenu</a></li><li data-path-depth="1"><a href="../../category/layout/special">special</a></li></ul></li><li data-path-depth="0"><a href="../../category/menu">menu</a></li><li data-path-depth="0"><a href="../../category/mod">mod</a><ul data-path-depth="1"><li data-path-depth="1"><a href="../../category/mod/btn">btn</a></li><li data-path-depth="1"><a href="../../category/mod/footer">footer</a></li><li data-path-depth="1"><a href="../../category/mod/header">header</a></li><li data-path-depth="1"><a href="../../category/mod/hero">hero</a></li><li data-path-depth="1"><a href="../../category/mod/search">search</a></li></ul></li></ul>
       </nav>
       <h2 class="aigis-sidemenu__heading">Tag</h2>
       <nav class="aigis-tags aigis-tagList"><a href="../../tag/base/index.html" class="aigis-tags__item aigis-tags__item--base">base</a><a href="../../tag/deprecated/index.html" class="aigis-tags__item aigis-tags__item--deprecated">deprecated</a><a href="../../tag/latest/index.html" class="aigis-tags__item aigis-tags__item--latest">latest</a><a href="../../tag/menu/index.html" class="aigis-tags__item aigis-tags__item--menu">menu</a><a href="../../tag/special/index.html" class="aigis-tags__item aigis-tags__item--special">special</a>
@@ -181,8 +187,15 @@
         <div class="aigis-contents__body">
           <h2 class="aigis-module__heading">All Modules</h2>
           <div class="aigis-searchForm">
-            <div class="aigis-searchForm__heading">検索できるページ</div>
             <div class="aigis-searchForm__body">
+              <div class="aigis-searchForm__icon"><?xml version="1.0" encoding="utf-8"?>
+<!-- Generated by IcoMoon.io -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="32" viewBox="0 0 30 32">
+<path fill="#000" d="M30 26l-7.785-7.785c1.111-1.814 1.785-3.929 1.785-6.215 0-6.626-5.375-12-12-12s-12 5.374-12 12c0 6.625 5.374 12 12 12 2.286 0 4.4-0.674 6.215-1.781l7.785 7.781c0.547 0.547 1.453 0.543 2 0l2-2c0.547-0.547 0.547-1.453 0-2zM12 20c-4.418 0-8-3.582-8-8s3.582-8 8-8 8 3.582 8 8-3.582 8-8 8z"></path>
+</svg>
+
+              </div>
               <input id="aigis-incremental-search" type="text" class="aigis-searchForm__input">
             </div>
           </div>
@@ -284,7 +297,7 @@
 
           </div>
           <div data-component-idx='5' style="display: block;" class="aigis-module">
-            <h2 id="Preview" class="aigis-module__heading">Preview</h2>
+            <h2 id="Preview Area" class="aigis-module__heading">Preview Area</h2>
             <div class="aigis-module__filepath">/aigis_theme/styleguide_assets/css/theme.css</div>
             <ul class="aigis-tags">
               <li class="aigis-tags__item aigis-tags__item--latest">latest</li>
@@ -514,6 +527,18 @@
 
           </div>
           <div data-component-idx='13' style="display: block;" class="aigis-module">
+            <h2 id="Search" class="aigis-module__heading">Search</h2>
+            <div class="aigis-module__filepath">/aigis_theme/styleguide_assets/css/theme.css</div>
+            <ul class="aigis-tags">
+              <li class="aigis-tags__item aigis-tags__item--menu">menu</li>
+            </ul><div class="aigis-preview">
+  </div>
+
+<pre><code class="lang-html">
+</code></pre>
+
+          </div>
+          <div data-component-idx='14' style="display: block;" class="aigis-module">
             <h2 id="header" class="aigis-module__heading">header</h2>
             <div class="aigis-module__filepath">/src/scss/style.scss</div>
             <ul class="aigis-tags">
@@ -555,7 +580,7 @@
 </code></pre>
 
           </div>
-          <div data-component-idx='14' style="display: block;" class="aigis-module">
+          <div data-component-idx='15' style="display: block;" class="aigis-module">
             <h2 id="hero" class="aigis-module__heading">hero</h2>
             <div class="aigis-module__filepath">/src/scss/style.scss</div>
             <ul class="aigis-tags">
@@ -574,7 +599,7 @@
 </code></pre>
 
           </div>
-          <div data-component-idx='15' style="display: block;" class="aigis-module">
+          <div data-component-idx='16' style="display: block;" class="aigis-module">
             <h2 id="footer" class="aigis-module__heading">footer</h2>
             <div class="aigis-module__filepath">/src/scss/style.scss</div>
             <ul class="aigis-tags">
@@ -591,7 +616,7 @@
 </code></pre>
 
           </div>
-          <div data-component-idx='16' style="display: block;" class="aigis-module">
+          <div data-component-idx='17' style="display: block;" class="aigis-module">
             <h2 id="Button" class="aigis-module__heading">Button</h2>
             <div class="aigis-module__filepath">/src/scss/style.scss</div>
             <ul class="aigis-tags">
@@ -623,7 +648,7 @@
 </code></pre>
 
           </div>
-          <div data-component-idx='17' style="display: block;" class="aigis-module">
+          <div data-component-idx='18' style="display: block;" class="aigis-module">
             <h2 id="Profile" class="aigis-module__heading">Profile</h2>
             <div class="aigis-module__filepath">/src/scss/style.scss</div>
             <ul class="aigis-tags">

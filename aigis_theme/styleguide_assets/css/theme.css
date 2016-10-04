@@ -125,7 +125,7 @@ search:
   border-radius: none;
   border: none;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.2s;
 }
 
 .aigis-icon-hamburger span {
@@ -162,13 +162,13 @@ search:
 }
 
 .aigis-icon-hamburger--htx span {
-  transition: background 0s 0.3s;
+  transition: background 0s 0.2s;
 }
 
 .aigis-icon-hamburger--htx span::before,
 .aigis-icon-hamburger--htx span::after {
-  transition-duration: 0.3s, 0.3s;
-  transition-delay: 0.3s, 0s;
+  transition-duration: 0.2s, 0.2s;
+  transition-delay: 0.2s, 0s;
 }
 
 .aigis-icon-hamburger--htx span::before {
@@ -176,8 +176,7 @@ search:
 }
 
 .aigis-icon-hamburger--htx span::after {
-  -webkit-transition-property: bottom, -webkit-transform;
-          transition-property: bottom, transform;
+  transition-property: bottom, transform;
 }
 
 /* active state */
@@ -204,7 +203,7 @@ search:
 .aigis-icon-hamburger--htx.is-active span::before,
 .aigis-icon-hamburger--htx.is-active span::after {
   background-color: #fff;
-  transition-delay: 0s, 0.3s;
+  transition-delay: 0s, 0.2s;
 }
 
 
@@ -241,7 +240,7 @@ search:
   width: 14px;
   height: 14px;
   fill: #9e9e9e;
-  transition: all 0.3s;
+  transition: all 0.2s;
 }
 .aigis-icon-cog.is-active > svg{
   fill: #ffffff;
@@ -305,7 +304,7 @@ search:
 
 /*
 ---
-name: Preview
+name: Preview Area
 category: body
 tag: latest
 search:
@@ -779,7 +778,7 @@ search:
   transform: translateY(-10px);
   transition: visibility 0s ease-in 0.1s,
               transform 0.1s ease-in,
-              opacity 0.1s ease-in;
+              opacity 0.2s ease-in;
 }
 .aigis-setting-menu.is-opened {
   z-index: 2;
@@ -821,4 +820,53 @@ search:
   order: -1;
   flex: 0 0 auto;
   margin-right: 10px;
+}
+
+
+/*
+---
+name: Search
+category: mod/search
+tag:
+  - menu
+search:
+  - all
+---
+
+```html
+```
+
+*/
+
+.aigis-searchForm {
+  margin: 50px 0 50px;
+}
+
+.aigis-searchForm__body {
+  position: relative;
+}
+
+.aigis-searchForm__icon {
+  position: absolute;
+  top: 14px;
+  left: 0;
+}
+.aigis-searchForm__icon > svg {
+  width: 20px;
+  height: 20px;
+}
+
+.aigis-searchForm__input {
+  width: 300px;
+  height: 42px;
+  border: 0;
+  border-bottom: 1px solid #999999;
+  background-color: transparent;
+  outline: 0;
+  font-size: 18px;
+  transition: width 0.2s linear, border-color 0.2s linear;
+}
+.aigis-searchForm__input:focus {
+  border-bottom-color: #17a3e9;
+  width: 100%;
 }
