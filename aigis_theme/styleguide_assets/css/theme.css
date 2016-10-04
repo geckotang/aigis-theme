@@ -808,6 +808,8 @@ search:
   filter: grayscale(1);
 }
 .aigis-setting-menu__key {
+  display: flex;
+  align-items: center;
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
