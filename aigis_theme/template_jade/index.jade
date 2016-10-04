@@ -8,6 +8,7 @@ html
     link(href=root + 'css/style.css', rel='stylesheet')
     script(src=root + 'styleguide_assets/js/drawer.js')
     script(src=root + 'styleguide_assets/js/setting-menu.js')
+    script(src=root + 'styleguide_assets/js/codeblocks-expander.js')
     if title === 'all'
       include ./lunr-script
   body
@@ -29,11 +30,11 @@ html
               .aigis-setting-menu__value
                 input(type="color", id="aigis-change-preview-bg-color")
             label.aigis-setting-menu__item
-              .aigis-setting-menu__key コードブロックを非表示にします
+              .aigis-setting-menu__key コードブロックを表示します
               .aigis-setting-menu__value
-                input(type="checkbox", id="aigis-toggle-codeblock")
+                input(type="checkbox", id="aigis-codeblocks-expander")
+    include ./sidemenu
     .aigis-container
-      include ./sidemenu
       .aigis-contents
         .aigis-contents__body
           include ./components

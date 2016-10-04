@@ -7,7 +7,7 @@
   //
   var Aigis = window.Aigis || {}
 
-  var visible = false;
+  var visible = false
 
   window.addEventListener('DOMContentLoaded', function () {
     var button = document.getElementById('aigis-setting-menu-toggler')
@@ -15,16 +15,11 @@
     var menu = document.getElementById('aigis-setting-menu')
     // 設定アイコン
     button.addEventListener('click', function () {
-      visible = visible ? false : true;
+      visible = !visible
       icon.classList.toggle('is-active')
       menu.classList.toggle('is-opened')
     }, false)
-    // ESCキー
-    document.addEventListener('click', function (e) {
-      console.log(e)
-    }, false)
   }, false)
-
 
   window.Aigis = Aigis
 
